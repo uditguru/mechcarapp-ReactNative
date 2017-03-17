@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Case Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+ <ion-list>
+
+  <ion-item *ngIf="mech.user">
+    <ion-label stacked>Name</ion-label>
+    <ion-input type="text" [value]=" mech.user.name "></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Location</ion-label>
+    <ion-input type="text" [(ngModel)]="location"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Service Type</ion-label>
+    <ion-input type="text" [(ngModel)]="type"></ion-input>
+  </ion-item>
+   <span style="float: right;"><button (click)="add(mech.user)">Add Car</button></span>
+  <ion-item>
+    <ion-label>Car</ion-label>
+    <ion-select [(ngModel)]="vehicle">
+      <ion-option *ngFor="let cars of mech.car">{{cars.Make}} {{cars.Model}}</ion-option>
+
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Vehicle Number</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Payment Mode</ion-label>
+    <ion-select [(ngModel)]="payement">
+      <ion-option value="nes">Cash</ion-option>
+      <ion-option value="n64">Online</ion-option>
+    </ion-select>
+  </ion-item>
+  <button class="button-bottom" ion-button full (click)="book(mech.user)" >Book</button>
+
+
+</ion-list>
+</ion-content>

@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>MechCar</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-searchbar [value]="data"></ion-searchbar>
+ <ion-slides pager class="slides-main">
+
+  <ion-slide style="background-image: url('assets/img/bnr.png');">
+  </ion-slide>
+
+  <ion-slide style="background-image: url('assets/img/bnr.png');">
+  </ion-slide>
+</ion-slides>
+<ion-card class="dialcard">
+<ion-grid>
+  <ion-row>
+    <ion-col (click)="makereq('Car Wash')"  width-33>
+    <img  src="assets/img/wash.png">
+    <h4>Car Wash</h4>
+    </ion-col>
+  <ion-col (click)="makereq('Wheel Alignment')" width-33>
+  <img src="assets/img/align.png">
+      <h4>Wheel Alignment</h4>
+
+    </ion-col><!--
+      <ion-col (click)="makereq('Road Support')" width-33>
+      <img src="https://cdn1.iconfinder.com/data/icons/flat-transport-icons-1/48/Tow_Truck-64.png">
+          <h4>Road Support</h4>
+
+      </ion-col> -->
+    <ion-col (click)="makereq('General Servicing')" width-33>
+    <img src="assets/img/serv.png">
+        <h4>General Servicing</h4>
+
+    </ion-col>
+    <ion-col (click)="makereq('Repair')" width-33>
+    <img src="assets/img/rep.png">
+        <h4>Repair</h4>
+
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-card>
+<span style="height: 4%"></span>
+</ion-content>

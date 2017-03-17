@@ -1,0 +1,40 @@
+
+
+
+
+<ion-content padding class="height" id="search-view" (ionOpen)="menuOpened()" (ionClose)="menuClosed()">
+
+    <ion-item>
+      <ion-label>Make</ion-label>
+      <ion-select [(ngModel)]="Make" (ionChange)="req()">
+        <ion-option *ngFor="let c of data"  [value]="c.name" >{{c.name}}</ion-option>
+
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Model</ion-label>
+      <ion-select [(ngModel)]="Year">
+        <ion-option *ngFor="let c of model" [value]="c.model" >{{c.model}}</ion-option>
+
+      </ion-select>
+    </ion-item>
+  
+ 
+ 
+<ion-footer >
+  <ion-grid>
+    <ion-row>
+      <ion-col width-50>
+
+        <button ion-button  class="buttonReq" (click)=saveCar()>Add Car</button>
+
+      </ion-col>
+      <ion-col width-50>
+        <button ion-button  outline (click)=dismiss() class="buttonReq">Cancel</button>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>
+
+</ion-content>

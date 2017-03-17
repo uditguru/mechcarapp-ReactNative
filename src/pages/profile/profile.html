@@ -1,0 +1,35 @@
+
+<ion-header>
+
+  <ion-navbar>
+  <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+<img class="cntimg" src="https://cdn2.iconfinder.com/data/icons/pictograms-vol-1/400/human-128.png">
+
+<ion-list *ngIf="mech.user">
+  <ion-list-header>
+    Profile Details
+  </ion-list-header>
+  
+  <ion-item>Name <span class="credentials" style="text-align: right;float: right;">{{ mech.user.name }}</span> </ion-item>
+ 
+  <ion-item>Email<span class="credentials" style="text-align: right;float: right;">{{ mech.user.email }}</span></ion-item>
+  
+  <ion-item>Mobile<span class="credentials" style="text-align: right;float: right;">{{ mech.user.mobile }}</span></ion-item>
+</ion-list>
+<ion-list *ngIf="mech.user">
+  <ion-list-header>
+  Logout  
+  </ion-list-header>
+  <ion-item style="color: blue" (click)="logout()">Logout</ion-item>
+</ion-list>
+
+</ion-content>

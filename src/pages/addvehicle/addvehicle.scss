@@ -1,0 +1,37 @@
+.height {
+    position: relative;
+    top: 40%;
+    left: 0;
+    display: block;
+    width: 100%;
+    min-height: 60%;
+    max-height: 75%;
+    bottom: 1px;
+    background-color: white;
+    z-index: 100;
+}
+ion-select{
+  width: 90;
+  position : relative;
+  z-index: 1000;
+}
+.buttonReq{
+  width: 100%;
+}
+.cardOptions{
+  padding: 1vh;
+ width: 100%;
+}
+.flexGrid >ion-row{
+  flex-wrap: wrap;
+  padding: 0;
+}
+.flexGrid >ion-row >ion-col{
+  
+  padding: 0;
+
+}
+ion-footer{
+  position:fixed;
+  bottom:0;
+}

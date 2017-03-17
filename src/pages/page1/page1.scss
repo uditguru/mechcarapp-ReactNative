@@ -1,0 +1,30 @@
+page-page1 {
+
+}
+.slides-main{
+	height: 20%;
+
+}
+ion-slide{
+	background-size: contain;	
+}
+ion-content{
+	padding: 0;
+
+}
+ion-row{
+	flex-wrap: wrap;
+}
+ion-col{
+	border: black;
+	text-align:center;
+}
+img{
+	padding: 20px;
+}
+ion-app.md [padding] .scroll-content {
+    padding: 0px;
+}
+.dialcard{
+	height: auto;
+}
